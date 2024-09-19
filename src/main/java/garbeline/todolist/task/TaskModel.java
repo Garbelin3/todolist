@@ -16,7 +16,7 @@ import lombok.Data;
 public class TaskModel {
 
     @Id
-    @GeneratedValue(generator = "UUID")
+    @GeneratedValue(generator = "uuid")
     private UUID id;
     private String description;
 
@@ -26,7 +26,8 @@ public class TaskModel {
     private LocalDateTime endAt;
     private String priority;
 
-    private LocalDateTime createdAt;
-    @CreationTimestamp
     private UUID idUser;
+
+    @CreationTimestamp
+    private LocalDateTime createdAt;
 }
